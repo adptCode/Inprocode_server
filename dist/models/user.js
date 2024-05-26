@@ -9,7 +9,7 @@ const User = connection_1.default.define('user', {
     name: {
         type: sequelize_1.DataTypes.STRING
     },
-    surname: {
+    lastName: {
         type: sequelize_1.DataTypes.STRING
     },
     email: {

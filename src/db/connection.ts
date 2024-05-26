@@ -5,4 +5,4 @@ const sequelize = new Sequelize('calcioapp', 'root', 'adminsql', {
     dialect: 'mysql'
 });
 
-export default sequelize
+export default sequelize;
