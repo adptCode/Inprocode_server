@@ -1,6 +1,7 @@
 import express, {Application, Request, Response} from 'express';
 import cors from 'cors'
 import routesUser from '../routes/user';
+import routesStadium from  '../routes/stadium'
 import db from '../db/connection';
 
 class Server {
@@ -30,7 +31,8 @@ class Server {
                 msg: 'Api working'
             })
         })
-        this.app.use('/api/users', routesUser)
+        this.app.use('/api/users', routesUser);
+        this.app.use('/api/stadiums', routesStadium);
     }
 
     midlewares() {
