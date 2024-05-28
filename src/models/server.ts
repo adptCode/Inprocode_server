@@ -1,7 +1,6 @@
 import express, {Application, Request, Response} from 'express';
 import cors from 'cors'
 import routesUser from '../routes/user';
-import routesStadium from  '../routes/stadium';
 import routesMarker from '../routes/marker'; 
 import db from '../db/connection';
 
@@ -33,7 +32,6 @@ class Server {
             })
         })
         this.app.use('/api/users', routesUser);
-        this.app.use('/api/stadiums', routesStadium);
         this.app.use('/api/markers', routesMarker);
     }
 

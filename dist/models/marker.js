@@ -16,7 +16,7 @@ const Marker = connection_1.default.define('marker', {
     },
     name: {
         type: sequelize_1.DataTypes.STRING,
-        allowNull: false
+        allowNull: true
     }
 }, {
     timestamps: false

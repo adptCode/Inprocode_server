@@ -15,6 +15,7 @@ export const createMarker = async (req: Request, res: Response) => {
     try {
         const marker = await Marker.create({ latitude, longitude, name });
         res.json(marker);
+        
     } catch (error) {
         res.status(500).json({ error: 'Something went wrong' });
     }

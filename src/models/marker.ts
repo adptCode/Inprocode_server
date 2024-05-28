@@ -12,7 +12,7 @@ const Marker = db.define('marker', {
     },
     name: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: true
     }
 }, {
     timestamps: false

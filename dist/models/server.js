@@ -15,7 +15,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
 const user_1 = __importDefault(require("../routes/user"));
-const stadium_1 = __importDefault(require("../routes/stadium"));
 const marker_1 = __importDefault(require("../routes/marker"));
 const connection_1 = __importDefault(require("../db/connection"));
 class Server {
@@ -39,7 +38,6 @@ class Server {
             });
         });
         this.app.use('/api/users', user_1.default);
-        this.app.use('/api/stadiums', stadium_1.default);
         this.app.use('/api/markers', marker_1.default);
     }
     midlewares() {
