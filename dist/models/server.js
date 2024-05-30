@@ -16,6 +16,7 @@ const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
 const user_1 = __importDefault(require("../routes/user"));
 const marker_1 = __importDefault(require("../routes/marker"));
+const event_1 = __importDefault(require("../routes/event"));
 const connection_1 = __importDefault(require("../db/connection"));
 class Server {
     constructor() {
@@ -39,11 +40,10 @@ class Server {
         });
         this.app.use('/api/users', user_1.default);
         this.app.use('/api/markers', marker_1.default);
+        this.app.use('/api/events', event_1.default);
     }
     midlewares() {
-        //Parseamos el body
         this.app.use(express_1.default.json());
-        //Cors
         this.app.use((0, cors_1.default)());
     }
     dbConnect() {
