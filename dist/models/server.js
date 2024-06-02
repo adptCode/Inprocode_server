@@ -18,6 +18,7 @@ const user_1 = __importDefault(require("../routes/user"));
 const marker_1 = __importDefault(require("../routes/marker"));
 const event_1 = __importDefault(require("../routes/event"));
 const dates_1 = __importDefault(require("../routes/dates"));
+const defaultMarker_1 = __importDefault(require("../routes/defaultMarker"));
 const connection_1 = __importDefault(require("../db/connection"));
 class Server {
     constructor() {
@@ -43,6 +44,7 @@ class Server {
         this.app.use('/api/markers', marker_1.default);
         this.app.use('/api/events', event_1.default);
         this.app.use('/api/dates', dates_1.default);
+        this.app.use('/api/defaultMarkers', defaultMarker_1.default);
     }
     midlewares() {
         this.app.use(express_1.default.json());

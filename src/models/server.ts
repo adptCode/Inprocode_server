@@ -3,7 +3,8 @@ import cors from 'cors'
 import routesUser from '../routes/user';
 import routesMarker from '../routes/marker'; 
 import routesEvent from '../routes/event';
-import routesDates from '../routes/dates'
+import routesDates from '../routes/dates';
+import routesDefaultMarker from '../routes/defaultMarker';
 import db from '../db/connection';
 
 class Server {
@@ -36,7 +37,8 @@ class Server {
         this.app.use('/api/users', routesUser);
         this.app.use('/api/markers', routesMarker);
         this.app.use('/api/events', routesEvent);
-        this.app.use('/api/dates', routesDates)
+        this.app.use('/api/dates', routesDates);
+        this.app.use('/api/defaultMarkers', routesDefaultMarker);
     }
 
     midlewares() {   
