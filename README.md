@@ -28,6 +28,10 @@ The purpose of this application is to provide a robust and scalable backend for 
 
   npm install
 
+  ### Database
+
+  In your mySQladmin create a database 'calcioapp', then import the calcioapp.sql file
+
   ### Running the Application
 
   nodemon dist/index.js
